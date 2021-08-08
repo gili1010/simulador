@@ -1,0 +1,32 @@
+.header{
+     .bg-red{
+          background-color: #111;
+
+          .redes{
+               display: flex;
+               padding-left: 260px;
+               margin: auto;
+
+               @media (max-width:992px){
+                         display: none;
+               }
+
+               ul{
+                    display: flex;
+                    color: #fff;
+                    text-decoration: none;
+               
+                    li{
+                         list-style: none;
+                         padding-left: 23px;
+                         padding-top: 15px; 
+                         
+                         a{
+                              font-size: 25px;
+                              color: #fff;
+                         }
+                    }
+               }
+          }
+     }
+}

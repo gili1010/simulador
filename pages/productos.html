@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- fuentes -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/700bb6b34f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/nosotros.css">
+     <link rel="stylesheet" href="../css/style.css">
+
+     <title>Productos</title>
+</head>
+<body >
+
+
+               <!-- Inicio Header -->
+               <header class="header">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+                         <div class="container-fluid">
+                              <a class="navbar-brand ms-5" href="#">Bebidas AG</a>
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"  aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                              </button>
+                              
+                         <div class="redes">
+                              <ul>
+                                   <li><a href="#"><i class="fab fa-facebook"></i></a>
+                                   </li>
+                                   <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                   <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                              </ul>
+                         </div>
+          
+                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                   <a class="nav-link active" href="../index.html">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                              <a class="nav-link" href="productos.html">Productos</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a  id="nosotros" class="nav-link" href="#">Nosotros</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a id="contacto" class="nav-link" href="#">contacto</a>
+                              </li>
+                              </ul>
+                         </div>
+                         </div>
+                    </nav>
+          
+               </header>
+               <!-- Fin Header -->
+
+               <!-- Nosotros con jquery -->
+               <div class="row">
+                    <div class="col-8 nosotros" id="mostrar">
+                         <h1>Sobre Nosotros</h1>
+                         <img src="../image/portada.png" alt="">  
+
+               </div>
+
+               <!-- Contacto con jquery -->
+               <div class="row">
+                    <div class="col-8 nosotros" id="maps">
+                         <h1>Contacto</h1>
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54339.3685275302!2d-64.47627113542491!3d-31.655459356928294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d574ade89939b%3A0x5290b7919d5d43fd!2sAlta%20Gracia%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1631491855763!5m2!1ses-419!2sar" width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+               </div>
+
+                    
+
+     <!-- Inicio Productos -->
+    <section class="contenedor-productos " id="contenedor">
+
+              <div class="carrito">
+                  <h2 class="borde"><a href="#">Nuestros Produtos</a></h2>
+                  <ul>
+                      <li class="submenu">
+                            <img src="../image/cart.png" id="img-carrito">
+                              <div id="carrito">
+                                      
+                                      <table id="lista-carrito" class="u-full-width">
+                                          <thead>
+                                              <tr>
+                                                  <th class="foto">Imagen</th>
+                                                  <th>Nombre|</th>
+                                                  <th >Precio|</th>
+                                                  <th>Cantidad|</th>
+                                                  <th>total</th>
+                                                  <th></th>
+                                              </tr>
+                                          </thead>
+                                          <tbody id="listado">
+                                          </tbody>
+
+                                      </table>
+
+                                      <div id="total" class="total"></div>
+
+                                      <a href="#" id="vaciar-carrito" class="btn boton">Vaciar Carrito</a>
+                              </div>
+                      </li>
+                  </ul>
+                  
+                  <div class="ps-4 pb-4">
+                    <div class="form-check">
+                         <input class="form-check-input" type="radio" name="bebidas" id="todos" value="todos" checked>
+                         <label class="form-check-label blanco" for="todos">
+                           Todos
+                         </label>
+                    </div>
+                    <div class="form-check">
+                         <input class="form-check-input" type="radio" name="bebidas" id="sinAlcohol" value="sinAlcohol">
+                         <label class="form-check-label blanco" for="sinAlcohol">
+                           Sin alcohol
+                         </label>
+                    </div>
+                    <div class="form-check">
+                         <input class="form-check-input" type="radio" name="bebidas" id="conAlcohol" value="conAlcohol">
+                         <label class="form-check-label blanco" for="conAlcohol">
+                           Con alcohol
+                         </label>
+                    </div>
+               </div> 
+              </div>
+
+          <div id="lista-bebidas" class="row row-cols-2  row-cols-md-4 row-cols-lg-6 m-auto w-75 text-center">
+
+            <template id="card" class="productos">
+              <div class="col mb-2">
+                <div class="card h-100">
+                  <img src="" id="img" class="card-img-top" alt="...">
+                    <div class="card-body pt-0">
+                      <h5 class="card-title">titulo</h5>
+                      <p class="card-text precio">Precio</p>
+                      <a class="boton" href="#" data-id="1">Agregar</a>
+                    </div>
+                </div>
+              </div>
+            </template>
+
+          </div>
+
+</section>
+<!-- Fin Productos -->
+
+
+<!-- js Bootstrap -->
+<script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+
+
+    <!-- Archivo js -->
+
+    <script src="../js/app.js"></script>
+    <script src="../js/db.js"></script>
+    <script src="../js/productos.js"></script>
+</body>
+</html>
